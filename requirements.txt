@@ -1,0 +1,8 @@
+# GUI automation and screenshots
+pyautogui>=1.0.0
+Pillow>=10.0.0
+# Required for locateOnScreen(..., confidence=...) in the bot module
+opencv-python>=4.8.0
+# Colored console output (Fore.WHITE, Fore.YELLOW, etc.) on Windows
+colorama>=0.4.0
+

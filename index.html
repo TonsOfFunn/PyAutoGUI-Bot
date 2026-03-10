@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PyAutoGUI Bot Template</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      min-height: 100vh;
+      background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+      color: #e8e8e8;
+      padding: 40px 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .container {
+      max-width: 560px;
+      width: 100%;
+      background: rgba(255, 255, 255, 0.05);
+      padding: 40px;
+      border-radius: 16px;
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+      animation: slideIn 0.5s ease-out;
+    }
+
+    @keyframes slideIn {
+      from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    h1 {
+      font-size: 28px;
+      font-weight: 700;
+      margin-bottom: 12px;
+      text-align: center;
+      background: linear-gradient(45deg, #ff6b6b, #4ecdc4, #45b7d1);
+      background-size: 200% 200%;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      animation: gradientShift 3s ease-in-out infinite;
+      letter-spacing: 1px;
+    }
+
+    @keyframes gradientShift {
+      0%, 100% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+    }
+
+    .tagline {
+      text-align: center;
+      color: rgba(255, 255, 255, 0.7);
+      font-size: 15px;
+      margin-bottom: 28px;
+    }
+
+    .description {
+      color: rgba(255, 255, 255, 0.85);
+      line-height: 1.6;
+      margin-bottom: 24px;
+      font-size: 15px;
+    }
+
+    .features {
+      list-style: none;
+      margin-bottom: 28px;
+    }
+    .features li {
+      padding: 10px 14px;
+      margin-bottom: 8px;
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: 10px;
+      border: 1px solid rgba(255, 255, 255, 0.05);
+      backdrop-filter: blur(5px);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      transition: all 0.3s ease;
+    }
+    .features li:hover {
+      background: rgba(255, 255, 255, 0.08);
+      transform: translateX(4px);
+      border-color: rgba(78, 205, 196, 0.2);
+    }
+    .features li::before {
+      content: '✓';
+      color: #4ecdc4;
+      font-weight: 700;
+    }
+
+    .actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      justify-content: center;
+    }
+    .btn {
+      padding: 12px 24px;
+      border: none;
+      border-radius: 8px;
+      font-weight: 600;
+      font-size: 14px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      text-decoration: none;
+      display: inline-block;
+    }
+    .btn-primary {
+      background: linear-gradient(45deg, #4ecdc4, #45b7d1);
+      color: #ffffff;
+      box-shadow: 0 4px 15px rgba(78, 205, 196, 0.3);
+    }
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(78, 205, 196, 0.4);
+      background: linear-gradient(45deg, #45b7d1, #4ecdc4);
+    }
+    .btn-ghost {
+      background: rgba(255, 255, 255, 0.1);
+      color: #e8e8e8;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+    .btn-ghost:hover {
+      background: rgba(255, 255, 255, 0.15);
+      border-color: rgba(78, 205, 196, 0.3);
+      transform: translateY(-2px);
+    }
+
+    .footer {
+      margin-top: 28px;
+      text-align: center;
+      color: rgba(255, 255, 255, 0.5);
+      font-size: 13px;
+    }
+    .footer a { color: rgba(78, 205, 196, 0.9); text-decoration: none; }
+    .footer a:hover { text-decoration: underline; }
+
+    @media (max-width: 400px) {
+      .container { padding: 24px; }
+      h1 { font-size: 22px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>PyAutoGUI Bot Template</h1>
+    <p class="tagline">A minimal baseline for GUI automation with PyAutoGUI</p>
+    <p class="description">
+      Reusable template for image-based desktop automation: locate/click helpers, configurable waits,
+      random ranges, and file logging. Set <code>PROJECT_ROOT</code> once and add your images and flow.
+    </p>
+    <ul class="features">
+      <li>Single place for project path (<code>pyautogui_bot_config.py</code>)</li>
+      <li>Image locate/click with confidence and human-like movement</li>
+      <li>Waits, random ranges, and timestamped log writing</li>
+    </ul>
+    <div class="actions">
+      <a href="https://github.com/TonsOfFunn/PyAutoGUI-Bot" class="btn btn-primary" target="_blank" rel="noopener">View on GitHub</a>
+      <a href="https://github.com/TonsOfFunn/PyAutoGUI-Bot#readme" class="btn btn-ghost" target="_blank" rel="noopener">README</a>
+    </div>
+    <p class="footer">
+      Made with ❤️ by <a href="https://github.com/TonsOfFunn">TonsOfFunn</a>
+    </p>
+  </div>
+</body>
+</html>
